@@ -6,7 +6,7 @@ def spiralmatrix(twodarr):
     while rstart < rend and cstart < cend:
             i = cstart
             while i < cend:
-                print(twodarr[rstart][i])
+                print(twodarr[rstart][i],"came1")
                 i += 1
             rstart += 1
             j = rstart
@@ -16,19 +16,22 @@ def spiralmatrix(twodarr):
             cend -= 1
            
             if rend > rstart+1:
-                k = cend 
+                k = cend-1 
                 while k >= cstart:
-                    print (twodarr[rend-1][k])
+                    print (twodarr[rend-1][k],"came")
                     k -= 1 
                 rend -=1
             if cend > cstart+1:
-                m = rend 
-                while m > rstart:
-                    print (twodarr[m][cstart])
+                m = rend-1 
+                while m >= rstart:
+                    print (twodarr[m][cstart],"came")
                     m -= 1
                 cstart += 1
 
-spiralmatrix([[1,  2,  3,  4,  5,  6],[7,  8,  9,  10, 11, 12],[13, 14, 15, 16, 17, 18]])            
+spiralmatrix([
+  [1, 2, 3],
+  [4, 5, 6]
+])            
                
                 
         
